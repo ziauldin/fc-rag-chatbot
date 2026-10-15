@@ -1,0 +1,10 @@
+# List of dependencies for the Flask RAG Chatbot project
+flask
+google-generativeai
+chromadb
+python-dotenv
+# The following packages are often needed for a robust Flask app, 
+# but for this minimal example, the above are strictly necessary.
+# requests
+# gunicorn # for production deployment
+sentence-transformers

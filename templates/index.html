@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask RAG Chatbot</title>
+    <!-- Load the custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">FC</div>
+                </div>
+                <div class="header-text">
+                    <h1>Shampy</h1>
+                    <p>Ask me anything about the FC Training program!</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- The main area where messages will be displayed -->
+        <div class="chat-messages" id="chat-messages">
+            <!-- Initial welcome message from the bot -->
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <div class="avatar bot-avatar">B</div>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I am the Shampy. I can answer questions based on my internal knowledge base. How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The input area for the user -->
+        <div class="chat-input-area">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your message here..." autofocus>
+                <button id="send-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load the custom JavaScript file -->
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>
